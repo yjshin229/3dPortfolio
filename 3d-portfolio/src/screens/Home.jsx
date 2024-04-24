@@ -2,16 +2,13 @@ import { Canvas } from "@react-three/fiber";
 import React, { Suspense } from "react";
 import { styled } from "styled-components";
 import Loader from "../components/Loader";
-import Plane from "../components/models/Plane";
 
 const Home = () => {
   return (
     <HomeSection>
       <HomeContainer>PopUp</HomeContainer>
       <StyledCanvas camera={{ near: 0.1, far: 1000 }}>
-        <Suspense fallback={<Loader />}>
-          <Plane />
-        </Suspense>
+        <Suspense fallback={<Loader />}></Suspense>
       </StyledCanvas>
     </HomeSection>
   );
