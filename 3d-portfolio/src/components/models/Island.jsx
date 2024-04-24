@@ -208,25 +208,25 @@ const Island = ({ isRotating, setIsRotating, ...props }) => {
         position={[-30.433, 8.865, 30.478]}
         rotation={[-1.41, -0.182, -2.308]}
       >
-        <mesh
+        {/* <mesh
           geometry={nodes.Object_33.geometry}
           material={materials["rocks.002"]}
         />
         <mesh
           geometry={nodes.Object_34.geometry}
           material={materials["rocks.003"]}
-        />
+        /> */}
       </group>
       <group
         position={[-46.367, 8.827, -31.152]}
         rotation={[0.066, 1.329, -0.124]}
       >
-        <mesh
+        {/* <mesh
           geometry={nodes.Object_40.geometry}
           material={materials["rocks.003"]}
-        />
+        /> */}
         <mesh geometry={nodes.Object_41.geometry} material={materials.rocks} />
-        <group position={[0, -2.99, 0]} rotation={[0, -1.271, 0]}>
+        {/* <group position={[0, -2.99, 0]} rotation={[0, -1.271, 0]}>
           <mesh
             geometry={nodes.Object_43.geometry}
             material={materials["rocks.003"]}
@@ -235,7 +235,7 @@ const Island = ({ isRotating, setIsRotating, ...props }) => {
             geometry={nodes.Object_44.geometry}
             material={materials.rocks}
           />
-        </group>
+        </group> */}
         <group position={[0, -1.933, 0]} rotation={[0, -1.271, 0]}>
           <mesh
             geometry={nodes.Object_46.geometry}
@@ -246,7 +246,7 @@ const Island = ({ isRotating, setIsRotating, ...props }) => {
             material={materials["rocks.003"]}
           />
         </group>
-        <mesh
+        {/* <mesh
           geometry={nodes.Object_49.geometry}
           material={materials["rocks.002"]}
           position={[-1.408, -2.768, 0.446]}
@@ -263,7 +263,7 @@ const Island = ({ isRotating, setIsRotating, ...props }) => {
           material={materials["rocks.002"]}
           position={[-0.55, -1.909, -1.205]}
           rotation={[2.437, 0.673, -2.143]}
-        />
+        /> */}
       </group>
       <group
         position={[44.725, 7.058, -24.956]}
@@ -903,12 +903,6 @@ const Island = ({ isRotating, setIsRotating, ...props }) => {
         position={[-41.547, 6.947, 26.178]}
       />
       <mesh
-        geometry={nodes.Object_194.geometry}
-        material={materials.pillar}
-        position={[-52.494, 6.064, -20.84]}
-        rotation={[0.01, -0.018, 0.045]}
-      />
-      <mesh
         geometry={nodes.Object_205.geometry}
         material={materials.rocks}
         position={[-33.218, 10.751, 17.88]}
@@ -1486,24 +1480,7 @@ const Island = ({ isRotating, setIsRotating, ...props }) => {
         position={[-10.739, 7.506, 40.066]}
         rotation={[-1.738, -0.604, -3.084]}
       />
-      <mesh
-        geometry={nodes.Object_402.geometry}
-        material={materials.leaves}
-        position={[-30.061, 6.426, 38.854]}
-        rotation={[-1.738, -0.604, -3.084]}
-      />
-      <mesh
-        geometry={nodes.Object_404.geometry}
-        material={materials.leaves}
-        position={[0.303, 6.64, 48.007]}
-        rotation={[-1.876, -0.243, -3.11]}
-      />
-      <mesh
-        geometry={nodes.Object_406.geometry}
-        material={materials.leaves}
-        position={[-36.593, 7.299, 21.684]}
-        rotation={[-1.703, -0.708, -2.807]}
-      />
+
       <mesh
         geometry={nodes.Object_408.geometry}
         material={materials["leaves.002"]}
@@ -1529,12 +1506,6 @@ const Island = ({ isRotating, setIsRotating, ...props }) => {
         rotation={[-1.009, -0.04, -0.099]}
       />
       <mesh
-        geometry={nodes.Object_416.geometry}
-        material={materials["leaves.002"]}
-        position={[23.816, 7.523, -43.555]}
-        rotation={[-1.434, -0.115, -0.849]}
-      />
-      <mesh
         geometry={nodes.Object_418.geometry}
         material={materials["leaves.002"]}
         position={[41.158, 4.259, -47.027]}
@@ -1551,30 +1522,6 @@ const Island = ({ isRotating, setIsRotating, ...props }) => {
         material={materials["leaves.001"]}
         position={[-36.513, 3.873, -48.694]}
         rotation={[-2.168, 0.011, 2.874]}
-      />
-      <mesh
-        geometry={nodes.Object_424.geometry}
-        material={materials["leaves.002"]}
-        position={[-58.574, 4.84, -14.182]}
-        rotation={[-2.168, 0.011, 2.874]}
-      />
-      <mesh
-        geometry={nodes.Object_426.geometry}
-        material={materials["leaves.002"]}
-        position={[-58.4, 4.889, -14.386]}
-        rotation={[-1.034, 0.233, 0.35]}
-      />
-      <mesh
-        geometry={nodes.Object_428.geometry}
-        material={materials["leaves.002"]}
-        position={[52.579, 5.74, -24.321]}
-        rotation={[-1.305, 0.662, 0.083]}
-      />
-      <mesh
-        geometry={nodes.Object_430.geometry}
-        material={materials.leaves}
-        position={[52.261, 5.967, -24.149]}
-        rotation={[-2.081, 0.317, 3.003]}
       />
       <mesh
         geometry={nodes.Object_432.geometry}
@@ -1594,96 +1541,7 @@ const Island = ({ isRotating, setIsRotating, ...props }) => {
         position={[32.543, 4.969, -48.31]}
         rotation={[-2.016, 0.668, 1.46]}
       />
-      <mesh
-        geometry={nodes.Object_438.geometry}
-        material={materials["leaves.001"]}
-        position={[30.468, 4.581, -47.728]}
-        rotation={[-1.773, -0.994, -1.748]}
-      />
-      <mesh
-        geometry={nodes.Object_440.geometry}
-        material={materials["leaves.003"]}
-        position={[-13.764, 5.772, -54.865]}
-        rotation={[-1.402, -0.343, -1.173]}
-      />
-      <mesh
-        geometry={nodes.Object_442.geometry}
-        material={materials["leaves.001"]}
-        position={[8.805, 56.891, -5.171]}
-        rotation={[-2.168, 0.011, 2.874]}
-      />
-      <mesh
-        geometry={nodes.Object_444.geometry}
-        material={materials["leaves.001"]}
-        position={[13.105, 56.324, -3.126]}
-        rotation={[-2.189, -0.169, 1.99]}
-      />
-      <mesh
-        geometry={nodes.Object_446.geometry}
-        material={materials["leaves.003"]}
-        position={[20.643, 5.802, -47.337]}
-        rotation={[-2.139, -0.268, -1.997]}
-      />
-      <mesh
-        geometry={nodes.Object_448.geometry}
-        material={materials["leaves.001"]}
-        position={[23.623, 7.113, -47.044]}
-        rotation={[-1.834, -0.457, -1.625]}
-      />
-      <mesh
-        geometry={nodes.Object_450.geometry}
-        material={materials["leaves.003"]}
-        position={[-33.888, 7.114, 28.823]}
-        rotation={[-1.522, -0.654, -1.86]}
-      />
-      <mesh
-        geometry={nodes.Object_452.geometry}
-        material={materials["leaves.003"]}
-        position={[-22.955, 5.184, 48.424]}
-        rotation={[-1.926, -0.336, -3.08]}
-      />
-      <mesh
-        geometry={nodes.Object_454.geometry}
-        material={materials["leaves.001"]}
-        position={[-2.15, 5.398, 53.314]}
-        rotation={[-1.836, 0.542, 1.579]}
-      />
-      <mesh
-        geometry={nodes.Object_456.geometry}
-        material={materials["leaves.002"]}
-        position={[18.965, 13.407, -31.976]}
-        rotation={[-1.899, -0.478, -2.392]}
-      />
-      <mesh
-        geometry={nodes.Object_458.geometry}
-        material={materials["leaves.002"]}
-        position={[12.389, 6.316, -48.856]}
-        rotation={[-1.742, -0.399, -2.082]}
-      />
-      <mesh
-        geometry={nodes.Object_460.geometry}
-        material={materials["leaves.002"]}
-        position={[26.469, 4.413, -48.073]}
-        rotation={[-1.925, -0.589, -2.247]}
-      />
-      <mesh
-        geometry={nodes.Object_462.geometry}
-        material={materials["leaves.001"]}
-        position={[-10.814, 5.394, -61.04]}
-        rotation={[-1.886, 0.21, 1.847]}
-      />
-      <mesh
-        geometry={nodes.Object_464.geometry}
-        material={materials["leaves.002"]}
-        position={[-45.324, 5.215, -36.725]}
-        rotation={[-1.661, -0.873, -1.907]}
-      />
-      <mesh
-        geometry={nodes.Object_466.geometry}
-        material={materials["leaves.001"]}
-        position={[-48.484, 5.239, -35.095]}
-        rotation={[-1.084, -0.362, -0.841]}
-      />
+
       <mesh
         geometry={nodes.Object_468.geometry}
         material={materials.leaves}
@@ -1696,30 +1554,7 @@ const Island = ({ isRotating, setIsRotating, ...props }) => {
         position={[0.538, 16.216, -36.681]}
         rotation={[-1.886, 0.21, 1.847]}
       />
-      <mesh
-        geometry={nodes.Object_472.geometry}
-        material={materials["leaves.001"]}
-        position={[0.748, 16.085, -36.309]}
-        rotation={[-1.243, -0.19, -1.233]}
-      />
-      <mesh
-        geometry={nodes.Object_474.geometry}
-        material={materials["leaves.001"]}
-        position={[4.544, 18.227, -34.824]}
-        rotation={[-1.457, 0.102, -1.097]}
-      />
-      <mesh
-        geometry={nodes.Object_476.geometry}
-        material={materials.leaves}
-        position={[9.734, 11.059, -42.154]}
-        rotation={[-2.056, -0.085, -1.866]}
-      />
-      <mesh
-        geometry={nodes.Object_478.geometry}
-        material={materials["leaves.002"]}
-        position={[29.273, 4.271, -48.337]}
-        rotation={[-2.016, 0.693, 1.343]}
-      />
+
       <mesh
         geometry={nodes.Object_480.geometry}
         material={materials["rocks.001"]}
@@ -1732,150 +1567,14 @@ const Island = ({ isRotating, setIsRotating, ...props }) => {
         position={[-11.218, 41.798, -9.622]}
         rotation={[-2.217, -0.744, 3.05]}
       />
-      <mesh
-        geometry={nodes.Object_484.geometry}
-        material={materials.leaves}
-        position={[-7.377, 40.132, -16.648]}
-        rotation={[-2.651, -0.1, 2.52]}
-      />
-      <mesh
-        geometry={nodes.Object_486.geometry}
-        material={materials["leaves.001"]}
-        position={[20.798, 8.736, -42.659]}
-        rotation={[-1.834, -0.457, -1.625]}
-      />
-      <mesh
-        geometry={nodes.Object_488.geometry}
-        material={materials["leaves.001"]}
-        position={[-5.961, 39.822, -17.901]}
-        rotation={[-1.462, -0.184, -1.79]}
-      />
-      <mesh
-        geometry={nodes.Object_490.geometry}
-        material={materials["leaves.001"]}
-        position={[-5.971, 39.752, -17.655]}
-        rotation={[-2.061, -0.4, 3.14]}
-      />
-      <mesh
-        geometry={nodes.Object_492.geometry}
-        material={materials["leaves.003"]}
-        position={[9.62, 56.722, -3.969]}
-        rotation={[-1.513, 0.628, -0.23]}
-      />
-      <mesh
-        geometry={nodes.Object_494.geometry}
-        material={materials["leaves.002"]}
-        position={[-10.921, 21.643, -25.411]}
-        rotation={[-1.205, -0.237, -0.644]}
-      />
-      <mesh
-        geometry={nodes.Object_496.geometry}
-        material={materials["leaves.001"]}
-        position={[-10.642, 21.493, -26.884]}
-        rotation={[-2.168, 0.011, 2.874]}
-      />
-      <mesh
-        geometry={nodes.Object_498.geometry}
-        material={materials["leaves.002"]}
-        position={[-10.873, 20.337, -28.214]}
-        rotation={[-2.79, 0.055, 2.912]}
-      />
-      <mesh
-        geometry={nodes.Object_500.geometry}
-        material={materials["leaves.001"]}
-        position={[-10.593, 21.007, -27.401]}
-        rotation={[-1.808, 0.23, 0.112]}
-      />
-      <mesh
-        geometry={nodes.Object_502.geometry}
-        material={materials["leaves.003"]}
-        position={[-8.185, 21.247, -26.98]}
-        rotation={[-2.489, -0.345, -2.571]}
-      />
-      <mesh
-        geometry={nodes.Object_504.geometry}
-        material={materials["leaves.003"]}
-        position={[-24.578, 25.59, -2.266]}
-        rotation={[-2.343, -0.713, -2.832]}
-      />
-      <mesh
-        geometry={nodes.Object_506.geometry}
-        material={materials["leaves.003"]}
-        position={[12.582, 7.11, 46.061]}
-        rotation={[-1.445, -0.26, -2.675]}
-      />
-      <mesh
-        geometry={nodes.Object_508.geometry}
-        material={materials["leaves.003"]}
-        position={[60.024, 3.499, -4.444]}
-        rotation={[-1.445, -0.26, -2.675]}
-      />
-      <mesh
-        geometry={nodes.Object_510.geometry}
-        material={materials["leaves.002"]}
-        position={[-15.166, 4.273, -63.23]}
-        rotation={[-1.642, -0.598, -2.214]}
-      />
-      <mesh
-        geometry={nodes.Object_512.geometry}
-        material={materials["leaves.002"]}
-        position={[-16.151, 4.328, -62.761]}
-        rotation={[-1.642, -0.598, -2.214]}
-      />
+
       <mesh
         geometry={nodes.Object_514.geometry}
         material={materials["rocks.001"]}
         position={[-16.976, 4.695, -60.977]}
         rotation={[-0.493, -1.084, -0.221]}
       />
-      <mesh
-        geometry={nodes.Object_516.geometry}
-        material={materials["leaves.001"]}
-        position={[-24.428, 4.471, -58.969]}
-        rotation={[-1.974, 0.454, 2.091]}
-      />
-      <mesh
-        geometry={nodes.Object_518.geometry}
-        material={materials["leaves.002"]}
-        position={[-25.194, 5.05, -52.855]}
-        rotation={[-1.661, -0.873, -1.907]}
-      />
-      <mesh
-        geometry={nodes.Object_520.geometry}
-        material={materials["leaves.001"]}
-        position={[-6.714, 49.423, -10.06]}
-        rotation={[-1.568, -0.533, -1.719]}
-      />
-      <mesh
-        geometry={nodes.Object_522.geometry}
-        material={materials.leaves}
-        position={[-7.595, 49.345, -8.653]}
-        rotation={[-2.145, -0.62, -3.089]}
-      />
-      <mesh
-        geometry={nodes.Object_524.geometry}
-        material={materials.leaves}
-        position={[-2.951, 56.141, -8.219]}
-        rotation={[-1.523, -0.406, -0.993]}
-      />
-      <mesh
-        geometry={nodes.Object_526.geometry}
-        material={materials["leaves.003"]}
-        position={[-4.485, 56.352, -6.66]}
-        rotation={[-2.343, -0.713, -2.832]}
-      />
-      <mesh
-        geometry={nodes.Object_528.geometry}
-        material={materials.leaves}
-        position={[-11.652, 41.334, -12.055]}
-        rotation={[-1.372, -0.173, -1.041]}
-      />
-      <mesh
-        geometry={nodes.Object_530.geometry}
-        material={materials.leaves}
-        position={[-12.436, 41.462, -12.38]}
-        rotation={[-2.12, -0.08, 2.27]}
-      />
+
       <mesh
         geometry={nodes.Object_532.geometry}
         material={materials["Material.005"]}
@@ -1900,12 +1599,7 @@ const Island = ({ isRotating, setIsRotating, ...props }) => {
         position={[-23.165, 10.91, -31.154]}
         rotation={[-1.93, -1.299, 1.32]}
       />
-      <mesh
-        geometry={nodes.Object_540.geometry}
-        material={materials["rocks.001"]}
-        position={[-29.58, 6.515, -36.673]}
-        rotation={[-2.855, 0.671, -3.101]}
-      />
+
       <mesh
         geometry={nodes.Object_542.geometry}
         material={materials["leaves.003"]}
@@ -2001,42 +1695,6 @@ const Island = ({ isRotating, setIsRotating, ...props }) => {
         material={materials.leaves}
         position={[-59.394, 5.428, 15.221]}
         rotation={[-2.135, -0.309, 2.527]}
-      />
-      <mesh
-        geometry={nodes.Object_574.geometry}
-        material={materials.leaves}
-        position={[-49.015, 6.153, 18.792]}
-        rotation={[-1.324, -0.359, -1.111]}
-      />
-      <mesh
-        geometry={nodes.Object_576.geometry}
-        material={materials["leaves.002"]}
-        position={[-54.79, 5, 4.829]}
-        rotation={[-0.996, 0.324, -0.279]}
-      />
-      <mesh
-        geometry={nodes.Object_613.geometry}
-        material={materials["leaves.001"]}
-        position={[62.544, -0.2, 4.47]}
-        rotation={[-0.761, 0.476, -0.07]}
-      />
-      <mesh
-        geometry={nodes.Object_615.geometry}
-        material={materials.butter}
-        position={[1.61, 7.889, -58.279]}
-        rotation={[-0.835, -0.503, 0.149]}
-      />
-      <mesh
-        geometry={nodes.Object_617.geometry}
-        material={materials.flower}
-        position={[6.317, 10.578, -58.455]}
-        rotation={[-1.215, -0.525, 0.164]}
-      />
-      <mesh
-        geometry={nodes.Object_619.geometry}
-        material={materials["flower.001"]}
-        position={[-14.584, 10.247, -58.696]}
-        rotation={[-1.215, -0.525, 0.164]}
       />
     </a.group>
   );
