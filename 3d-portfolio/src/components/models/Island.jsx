@@ -13,7 +13,7 @@ import { a } from "@react-spring/three";
 
 import islandScene from "../../assets/3d/fantasy_island.glb";
 
-const Island = ({ isRotating, setIsRotating, ...props }) => {
+const Island = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
   const { nodes, materials } = useGLTF(islandScene);
   const islandRef = useRef();
   const { gl, viewport } = useThree();
@@ -74,26 +74,26 @@ const Island = ({ isRotating, setIsRotating, ...props }) => {
       islandRef.current.rotation.y += rotSpeed.current;
     } else {
       const rotation = islandRef.current.rotation.y;
-      //   const normalizedRotation =
-      //     ((rotation % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
+      const normalizedRotation =
+        ((rotation % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
 
-      //   // Set the current stage based on the island's orientation
-      //   switch (true) {
-      //     //   case normalizedRotation >= 5.45 && normalizedRotation <= 5.85:
-      //     //     setCurrentStage(4);
-      //     //     break;
-      //     //   case normalizedRotation >= 0.85 && normalizedRotation <= 1.3:
-      //     //     setCurrentStage(3);
-      //     //     break;
-      //     case normalizedRotation >= 2.4 && normalizedRotation <= 2.6:
-      //       setCurrentStage(2);
-      //       break;
-      //     case normalizedRotation >= 4.25 && normalizedRotation <= 4.75:
-      //       setCurrentStage(1);
-      //       break;
-      //     default:
-      //       setCurrentStage(null);
-      //   }
+      // Set the current stage based on the island's orientation
+      switch (true) {
+        //   case normalizedRotation >= 5.45 && normalizedRotation <= 5.85:
+        //     setCurrentStage(4);
+        //     break;
+        //   case normalizedRotation >= 0.85 && normalizedRotation <= 1.3:
+        //     setCurrentStage(3);
+        //     break;
+        case normalizedRotation >= 2.4 && normalizedRotation <= 2.6:
+          setCurrentStage(2);
+          break;
+        case normalizedRotation >= 4.25 && normalizedRotation <= 4.75:
+          setCurrentStage(1);
+          break;
+        default:
+          setCurrentStage(null);
+      }
     }
   });
 
@@ -208,25 +208,25 @@ const Island = ({ isRotating, setIsRotating, ...props }) => {
         position={[-30.433, 8.865, 30.478]}
         rotation={[-1.41, -0.182, -2.308]}
       >
-        {/* <mesh
+        <mesh
           geometry={nodes.Object_33.geometry}
           material={materials["rocks.002"]}
         />
         <mesh
           geometry={nodes.Object_34.geometry}
           material={materials["rocks.003"]}
-        /> */}
+        />
       </group>
       <group
         position={[-46.367, 8.827, -31.152]}
         rotation={[0.066, 1.329, -0.124]}
       >
-        {/* <mesh
+        <mesh
           geometry={nodes.Object_40.geometry}
           material={materials["rocks.003"]}
-        /> */}
+        />
         <mesh geometry={nodes.Object_41.geometry} material={materials.rocks} />
-        {/* <group position={[0, -2.99, 0]} rotation={[0, -1.271, 0]}>
+        <group position={[0, -2.99, 0]} rotation={[0, -1.271, 0]}>
           <mesh
             geometry={nodes.Object_43.geometry}
             material={materials["rocks.003"]}
@@ -235,7 +235,7 @@ const Island = ({ isRotating, setIsRotating, ...props }) => {
             geometry={nodes.Object_44.geometry}
             material={materials.rocks}
           />
-        </group> */}
+        </group>
         <group position={[0, -1.933, 0]} rotation={[0, -1.271, 0]}>
           <mesh
             geometry={nodes.Object_46.geometry}
@@ -246,7 +246,7 @@ const Island = ({ isRotating, setIsRotating, ...props }) => {
             material={materials["rocks.003"]}
           />
         </group>
-        {/* <mesh
+        <mesh
           geometry={nodes.Object_49.geometry}
           material={materials["rocks.002"]}
           position={[-1.408, -2.768, 0.446]}
@@ -263,7 +263,7 @@ const Island = ({ isRotating, setIsRotating, ...props }) => {
           material={materials["rocks.002"]}
           position={[-0.55, -1.909, -1.205]}
           rotation={[2.437, 0.673, -2.143]}
-        /> */}
+        />
       </group>
       <group
         position={[44.725, 7.058, -24.956]}

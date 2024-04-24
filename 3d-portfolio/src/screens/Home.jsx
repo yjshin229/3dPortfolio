@@ -9,6 +9,7 @@ import Plane from "../components/models/Plane";
 //render Island
 const Home = () => {
   const [isRotating, setIsRotating] = useState(false);
+  const [currentStage, setCurrentStage] = useState(0);
 
   const adjustIslandForScreenSize = () => {
     let screenScale;
@@ -55,12 +56,12 @@ const Home = () => {
             groundColor={"#1f3019"}
             intensity={1}
           />
-          <Sky />
+          <Sky isRotating={isRotating} />
           <Plane
             position={planePosition}
             scale={planeScale}
             isRotating={isRotating}
-            rotation={[0, 10, 0]}
+            rotation={[0, 1, 0]}
           />
           <Island
             position={islandPosition}
@@ -68,6 +69,7 @@ const Home = () => {
             rotation={islandRotation}
             isRotating={isRotating}
             setIsRotating={setIsRotating}
+            setCurrentStage={setCurrentStage}
           />
         </Suspense>
       </StyledCanvas>
