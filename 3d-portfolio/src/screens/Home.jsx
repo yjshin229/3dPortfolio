@@ -1,17 +1,31 @@
 import { Canvas } from "@react-three/fiber";
-import React, { Suspense, useState } from "react";
+import React, { Suspense, useState, useEffect, useRef } from "react";
 import { styled } from "styled-components";
 import Loader from "../components/Loader";
 import FantasyIsland from "../components/models/FantasyIsland";
 import Sky from "../components/models/Sky";
 import Plane from "../components/models/Plane";
 import Popup from "../components/Popup";
-import Island from "../components/models/Island";
+import natureSound from "../assets/nature_sound.mp3";
+import { GiSoundOff, GiSoundOn } from "react-icons/gi";
 
 //render Island
 const Home = () => {
+  const audioRef = useRef(new Audio(natureSound));
+  audioRef.current.volume = 0.4;
+  audioRef.current.loop = true;
   const [isRotating, setIsRotating] = useState(false);
   const [currentStage, setCurrentStage] = useState(null);
+  const [isMusicOn, setIsMusicOn] = useState(false);
+
+  useEffect(() => {
+    if (isMusicOn) {
+      audioRef.current.play();
+    }
+    return () => {
+      audioRef.current.pause();
+    };
+  }, [isMusicOn]);
 
   const adjustIslandForScreenSize = () => {
     let screenScale;
@@ -77,6 +91,11 @@ const Home = () => {
           />
         </Suspense>
       </StyledCanvas>
+      <SoundToggleContainer>
+        <SoundIcon onClick={() => setIsMusicOn(!isMusicOn)}>
+          {isMusicOn ? <GiSoundOff /> : <GiSoundOn />}
+        </SoundIcon>
+      </SoundToggleContainer>
     </HomeSection>
   );
 };
@@ -105,4 +124,23 @@ const StyledCanvas = styled(Canvas)`
   height: 100vh;
   background-color: transparent;
   cursor: ${(props) => (props.isRotating ? "grabbing" : "grab")};
+`;
+
+const SoundToggleContainer = styled.div`
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+`;
+
+const SoundIcon = styled.div`
+  background-color: orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+  color: white;
+  font-size: 1.5rem;
 `;
