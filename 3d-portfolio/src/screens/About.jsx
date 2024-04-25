@@ -1,5 +1,4 @@
-import { Canvas } from "@react-three/fiber";
-import React, { Suspense, useState } from "react";
+import React from "react";
 import { styled } from "styled-components";
 import { technologies, experiences, education } from "../constants";
 import CTA from "../components/CTA";

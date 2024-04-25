@@ -1,13 +1,12 @@
 import React, { useRef } from "react";
-import { useGLTF, useAnimations } from "@react-three/drei";
-import { useFrame, useThree } from "@react-three/fiber";
+import { useAnimations, useGLTF } from "@react-three/drei";
 import { a } from "@react-spring/three";
 import islandScene from "../../assets/3d/island.glb";
 
 const Island = ({ props }) => {
   const group = useRef();
   const { nodes, materials, animations } = useGLTF(islandScene);
-  //   const { actions } = useAnimations(animations, group);
+  const { actions } = useAnimations(animations, group);
   return (
     <a.group ref={group} {...props}>
       <group name="Sketchfab_Scene">

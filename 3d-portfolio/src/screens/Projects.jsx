@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { projects } from "../constants";
 import { Link } from "react-router-dom";
-import { IoMdArrowRoundForward } from "react-icons/io";
 import CTA from "../components/CTA";
 
 const Projects = () => {

@@ -1,9 +1,12 @@
-import React, { Suspense, useEffect, useRef, useState } from "react";
+import React, { Suspense, useRef, useState } from "react";
 import styled from "styled-components";
 import emailjs from "@emailjs/browser";
 import { Canvas } from "@react-three/fiber";
 import Cat from "../components/models/Cat";
 import Loader from "../components/Loader";
+import Alert from "@mui/material/Alert";
+import CheckIcon from "@mui/icons-material/Check";
+import useAlert from "../hooks/useAlert";
 
 //contact screen handling message sending
 const Contact = () => {
@@ -11,6 +14,8 @@ const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [isLoading, setIsLoading] = useState(false);
   const [currentAnimation, setCurrentAnimation] = useState("touch");
+
+  const { alert, showAlert, hideAlert } = useAlert();
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -40,26 +45,38 @@ const Contact = () => {
           to_email: "yjshin229@gmail.com",
           message: form.message,
         },
-        process.env.REACT_APP_EMAILJS_SERVICE_ID
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
       )
       .then(() => {
         setIsLoading(false);
+        showAlert({
+          show: true,
+          text: "Your email was sent successfully. Thank you!",
+          type: "success",
+        });
         setTimeout(() => {
           setForm({ name: "", email: "", message: "" });
           setCurrentAnimation("touch");
-        }, [2000]);
+        }, [3000]);
       })
       .catch((err) => {
         setIsLoading(false);
         setCurrentAnimation("touch");
         console.log(err);
+        showAlert({
+          show: true,
+          text: "There was an error sending your email. Please try again.",
+          type: "error",
+        });
       });
   };
   return (
     <ContactContainer>
       <InputContainer>
+        {alert.show && <Alert severity={alert.type}>{alert.text}</Alert>}
+
         <InputTitle>Get in Touch</InputTitle>
-        <InputForm onSubmit={handleSubmit}>
+        <InputForm onSubmit={handleSubmit} ref={formRef}>
           <InputLabel>Name</InputLabel>
           <Input
             type="text"
