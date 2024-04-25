@@ -4,6 +4,7 @@ import { styled } from "styled-components";
 import { technologies, experiences, education } from "../constants";
 import CTA from "../components/CTA";
 
+//component about me. List my tech skills, education and work experience
 const About = () => {
   return (
     <AboutSection>
@@ -22,7 +23,6 @@ const About = () => {
         <Skills>
           {technologies.map((tech) => (
             <SkillImagesContainer>
-              {/* <SkillIconBackWrapper /> */}
               <SkillIconWrapper>
                 <SkillImage src={tech.icon} alt={tech.name} key={tech.index} />
               </SkillIconWrapper>

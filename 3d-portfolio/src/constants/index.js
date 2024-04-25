@@ -30,8 +30,6 @@ import {
   mysql,
 } from "../assets/icons";
 
-import { classum } from "../assets/images/";
-
 export const navLinks = [
   {
     id: "about",
