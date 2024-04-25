@@ -23,7 +23,7 @@ const StyledHeader = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 2rem 1rem;
-  max-width: 64rem; /* 1024px */
+  max-width: 64rem;
   margin-inline: auto;
   position: absolute;
   top: 0;
