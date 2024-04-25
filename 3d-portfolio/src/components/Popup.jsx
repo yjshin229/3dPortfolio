@@ -35,7 +35,7 @@ const Popup = ({ currentStage }) => {
     3: (
       <InfoBox
         text={"Ready to connect?"}
-        link="/contacts"
+        link="/contact"
         btnText={"Let's Chat"}
       />
     ),
@@ -114,8 +114,8 @@ const StyledLink = styled(Link)`
   align-items: center;
   /* gap: 3; */
   text-decoration: none;
-  width: 90%;
+  width: 80%;
   @media (max-width: 640px) {
-    width: 90%;
+    width: 50%;
   }
 `;
