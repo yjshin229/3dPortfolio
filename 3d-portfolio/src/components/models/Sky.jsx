@@ -1,5 +1,5 @@
 import { useGLTF } from "@react-three/drei";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import skyScene from "../../assets/3d/sky.glb";
 import { useFrame } from "@react-three/fiber";
 
@@ -7,9 +7,18 @@ const Sky = ({ isRotating }) => {
   const sky = useGLTF(skyScene);
   const ref = useRef();
 
+  const [autoRotate, setAutoRotate] = useState(true);
+
   useFrame((_, delta) => {
+    const rotationSpeed = isRotating ? 0.15 * delta : 0.05 * delta;
+
     if (isRotating) {
-      ref.current.rotation.y += 0.15 * delta;
+      setAutoRotate(false);
+    } else {
+      setAutoRotate(true);
+    }
+    if (isRotating || autoRotate) {
+      ref.current.rotation.y += rotationSpeed;
     }
   });
   return (

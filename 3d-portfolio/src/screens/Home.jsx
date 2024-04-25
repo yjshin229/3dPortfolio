@@ -78,7 +78,6 @@ const Home = () => {
           <Plane
             position={planePosition}
             scale={planeScale}
-            isRotating={isRotating}
             rotation={[0, -1, 0]}
           />
           <FantasyIsland

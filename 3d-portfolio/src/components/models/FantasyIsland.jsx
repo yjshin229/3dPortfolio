@@ -6,7 +6,7 @@ Source: https://sketchfab.com/3d-models/fantasy-island-88765d3c5db349e59c39cf9f5
 Title: Fantasy_Island
 */
 
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { useGLTF } from "@react-three/drei";
 import { useFrame, useThree } from "@react-three/fiber";
 import { a } from "@react-spring/three";
@@ -27,6 +27,21 @@ const FantasyIsland = ({
   const lastX = useRef(0);
   const rotSpeed = useRef(0);
   const dampingFactor = 0.95;
+  const [isAutoRotate, setIsAutoRotate] = useState(true);
+
+  useFrame(() => {
+    if (!isRotating) {
+      if (Math.abs(rotSpeed.current) < 0.001) {
+        rotSpeed.current = 0;
+        if (isAutoRotate) {
+          rotSpeed.current = 0.001;
+        }
+      } else {
+        rotSpeed.current *= dampingFactor;
+      }
+      islandRef.current.rotation.y += rotSpeed.current;
+    }
+  });
 
   const handlePointerDown = (e) => {
     e.stopPropagation();
@@ -83,7 +98,6 @@ const FantasyIsland = ({
       const rotation = islandRef.current.rotation.y;
       const normalizedRotation =
         ((rotation % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
-      console.log(normalizedRotation);
 
       // Set the current checkpoint based on the island's orientation
       switch (true) {
