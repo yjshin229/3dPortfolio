@@ -18,10 +18,24 @@ const Home = () => {
   const [currentStage, setCurrentStage] = useState(null);
   const [isMusicOn, setIsMusicOn] = useState(false);
 
+  //try turning on music as soon as we enter home.
+  useEffect(() => {
+    const playAudio = async () => {
+      try {
+        await audioRef.current.play();
+        setIsMusicOn(true);
+      } catch (err) {
+        console.log("Playback prevented by the browser");
+      }
+    };
+    playAudio();
+  }, []);
+
   useEffect(() => {
     if (isMusicOn) {
       audioRef.current.play();
     }
+
     return () => {
       audioRef.current.pause();
     };
