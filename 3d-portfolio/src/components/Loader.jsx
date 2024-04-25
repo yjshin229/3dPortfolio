@@ -1,12 +1,14 @@
 import React from "react";
 import { Html } from "@react-three/drei";
 import { styled, keyframes } from "styled-components";
+import HashLoader from "react-spinners/HashLoader";
 
 const Loader = () => {
   return (
     <Html>
       <LoaderContainer>
-        <Spinner />
+        {/* <Spinner /> */}
+        <HashLoader color={"#f59e0b"} loading={true} size={50} />
       </LoaderContainer>
     </Html>
   );
@@ -14,26 +16,8 @@ const Loader = () => {
 
 export default Loader;
 
-const spin = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-`;
-
 const LoaderContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-`;
-
-const Spinner = styled.div`
-  width: 5rem;
-  height: 5rem;
-  border-width: 0.5rem;
-  border-color: rgba(245, 158, 11, 0.2);
-  border-radius: 1000rem;
-  animation: ${spin} 1s linear infinite;
 `;

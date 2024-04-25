@@ -5,7 +5,6 @@ import { Canvas } from "@react-three/fiber";
 import Cat from "../components/models/Cat";
 import Loader from "../components/Loader";
 import Alert from "@mui/material/Alert";
-import CheckIcon from "@mui/icons-material/Check";
 import useAlert from "../hooks/useAlert";
 
 //contact screen handling message sending
@@ -57,6 +56,7 @@ const Contact = () => {
         setTimeout(() => {
           setForm({ name: "", email: "", message: "" });
           setCurrentAnimation("touch");
+          hideAlert();
         }, [3000]);
       })
       .catch((err) => {
