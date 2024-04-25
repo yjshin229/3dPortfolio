@@ -2,9 +2,11 @@ import { Canvas } from "@react-three/fiber";
 import React, { Suspense, useState } from "react";
 import { styled } from "styled-components";
 import Loader from "../components/Loader";
-import Island from "../components/models/Island";
+import FantasyIsland from "../components/models/FantasyIsland";
 import Sky from "../components/models/Sky";
 import Plane from "../components/models/Plane";
+import Popup from "../components/Popup";
+import Island from "../components/models/Island";
 
 //render Island
 const Home = () => {
@@ -13,7 +15,7 @@ const Home = () => {
 
   const adjustIslandForScreenSize = () => {
     let screenScale;
-    let screenPosition = [0, -23, -100];
+    let screenPosition = [0, -23, -110];
     let rotation = [0.1, 4.7, 0];
 
     if (window.innerWidth < 768) {
@@ -46,7 +48,9 @@ const Home = () => {
 
   return (
     <HomeSection>
-      <HomeContainer>PopUp</HomeContainer>
+      <HomeContainer>
+        {currentStage && <Popup currentStage={currentStage} />}
+      </HomeContainer>
       <StyledCanvas camera={{ near: 0.1, far: 1000 }} isRotating={isRotating}>
         <Suspense fallback={<Loader />}>
           <ambientLight intensity={0.5} />
@@ -63,7 +67,7 @@ const Home = () => {
             isRotating={isRotating}
             rotation={[0, 1, 0]}
           />
-          <Island
+          <FantasyIsland
             position={islandPosition}
             scale={islandScale}
             rotation={islandRotation}
