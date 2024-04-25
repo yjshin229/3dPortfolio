@@ -83,16 +83,17 @@ const FantasyIsland = ({
       const rotation = islandRef.current.rotation.y;
       const normalizedRotation =
         ((rotation % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
+      console.log(normalizedRotation);
 
       // Set the current checkpoint based on the island's orientation
       switch (true) {
-        case normalizedRotation >= 2.8 && normalizedRotation <= 3.7:
+        case normalizedRotation >= 2.8 && normalizedRotation <= 4.5:
           setCurrentStage(3);
           break;
-        case normalizedRotation >= 0.74 && normalizedRotation <= 2:
+        case normalizedRotation >= 0.4 && normalizedRotation <= 2:
           setCurrentStage(2);
           break;
-        case normalizedRotation >= 5.6 && normalizedRotation <= 6.2:
+        case normalizedRotation >= 5.1 && normalizedRotation <= 6.1:
           setCurrentStage(1);
           break;
         default:
@@ -432,7 +433,7 @@ const FantasyIsland = ({
           rotation={[0.11, -1.203, 0.194]}
         />
       </group>
-      <group position={[40.339, 16.048, 60.902]} rotation={[0, -10, 0]}>
+      <group position={[60.339, 16.048, 60.902]} rotation={[0, -10, 0]}>
         <mesh
           geometry={nodes.Object_196.geometry}
           material={materials["Material.004"]}

@@ -29,8 +29,8 @@ const Home = () => {
 
   const adjustIslandForScreenSize = () => {
     let screenScale;
-    let screenPosition = [0, -23, -110];
-    let rotation = [0.1, 4.7, 0];
+    let screenPosition = [0, -23, -120];
+    let rotation = [0.1, 0 - 1, 0];
 
     if (window.innerWidth < 768) {
       screenScale = [0.9, 0.9, 0.9];
@@ -49,10 +49,10 @@ const Home = () => {
 
     if (window.innerWidth < 768) {
       planeScale = [1.5, 1.5, 1.5];
-      planePosition = [-2, 1.5, 0];
+      planePosition = [-1.5, 1.5, 0];
     } else {
       planeScale = [3, 3, 3];
-      planePosition = [-7, 3, -4];
+      planePosition = [-5, 3, -4];
     }
 
     return [planeScale, planePosition];
@@ -110,7 +110,7 @@ const HomeSection = styled.section`
 
 const HomeContainer = styled.div`
   position: absolute;
-  top: 7rem;
+  top: 15rem;
   left: 0;
   right: 0;
   z-index: 10;

@@ -57,7 +57,7 @@ const InfoBoxContainer = styled.div`
   padding-top: 1rem;
   padding-bottom: 3rem;
   padding-inline: 2rem;
-  background-color: orange;
+  background-color: #ffa600ba;
   border-radius: 10px;
 `;
 
@@ -67,7 +67,7 @@ const StyledContentTitle = styled.h1`
   padding-inline: 3rem;
   color: white;
   margin-inline: 1.25rem;
-  background-color: orange;
+  background-color: #ffa600ba;
   border-radius: 10px;
   font-weight: 400;
 
@@ -94,7 +94,7 @@ const InfoBoxText = styled.p`
 `;
 
 const StyledLink = styled(Link)`
-  background-color: white;
+  background-color: #ffffffd9;
   border-radius: 0.5rem;
   box-shadow:
     0 4px 6px -1px rgb(100 100 100 / 0.1),
