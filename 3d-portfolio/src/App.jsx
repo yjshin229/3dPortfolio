@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { Home, About, Projects, Contact } from "./screens";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 
+//created theme for one of the packages (material ui (mui)) - for using Alerts
 const theme = createTheme({
   typography: {
     allVariants: {
@@ -15,6 +16,7 @@ const theme = createTheme({
   },
 });
 
+//Used Routerprovider in index.js and listed Routes in App.jsx
 function App() {
   return (
     <ThemeProvider theme={theme}>

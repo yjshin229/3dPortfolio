@@ -4,7 +4,6 @@ import { styled } from "styled-components";
 import { IoMdArrowRoundForward } from "react-icons/io";
 
 //popUp message floating in the middle of the screen
-
 const InfoBox = ({ text, link, btnText }) => {
   return (
     <InfoBoxContainer>

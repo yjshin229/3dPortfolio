@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
+//call to action.
+//added in the end of about screen and projects screen
 const CTA = () => {
   return (
     <CTAContainer>

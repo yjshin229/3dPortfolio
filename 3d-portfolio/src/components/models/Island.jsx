@@ -3,6 +3,8 @@ import { useAnimations, useGLTF } from "@react-three/drei";
 import { a } from "@react-spring/three";
 import islandScene from "../../assets/3d/island.glb";
 
+//A opensource 3d model.
+//modified to simplify the model to intergrate it with the bigger island model
 const Island = ({ props }) => {
   const group = useRef();
   const { nodes, materials, animations } = useGLTF(islandScene);

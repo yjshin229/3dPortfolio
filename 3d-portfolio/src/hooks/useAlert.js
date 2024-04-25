@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+//custom hook for displaying Alerts when sending email.
 const useAlert = () => {
   const [alert, setAlert] = useState({ show: false, text: "", type: "error" });
 

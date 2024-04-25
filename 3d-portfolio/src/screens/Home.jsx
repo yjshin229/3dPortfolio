@@ -9,7 +9,7 @@ import Popup from "../components/Popup";
 import natureSound from "../assets/nature_sound.mp3";
 import { GiSoundOff, GiSoundOn } from "react-icons/gi";
 
-//render Island
+//This screen is where we see the 3d island and can interact by rotating it.
 const Home = () => {
   const audioRef = useRef(new Audio(natureSound));
   audioRef.current.volume = 0.4;

@@ -3,6 +3,8 @@ import React, { useRef, useState } from "react";
 import skyScene from "../../assets/3d/sky.glb";
 import { useFrame } from "@react-three/fiber";
 
+//open source 3d model
+//added auto-rotation and manual rotation
 const Sky = ({ isRotating }) => {
   const sky = useGLTF(skyScene);
   const ref = useRef();

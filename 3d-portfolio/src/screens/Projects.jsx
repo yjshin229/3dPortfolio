@@ -4,6 +4,7 @@ import { projects } from "../constants";
 import { Link } from "react-router-dom";
 import CTA from "../components/CTA";
 
+//A screen for listing projects I've done in the past.
 const Projects = () => {
   return (
     <ProjectsSection>

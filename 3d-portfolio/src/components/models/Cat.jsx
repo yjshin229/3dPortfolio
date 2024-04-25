@@ -2,6 +2,8 @@ import React, { useRef, useEffect } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
 import pepperScene from "../../assets/3d/pepper.glb";
 
+//A simple animated 3D model created by me using blender.
+//exported as a glb file to render it in my project
 const Cat = ({ currentAnimation, ...props }) => {
   const group = useRef();
   const { nodes, materials, animations } = useGLTF(pepperScene);

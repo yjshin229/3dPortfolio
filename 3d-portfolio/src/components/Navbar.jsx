@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
-//floating NavBar
+//floating NavBar links to about me and projects
 const NavBar = () => {
   return (
     <StyledHeader>
