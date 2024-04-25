@@ -83,7 +83,6 @@ const FantasyIsland = ({
       const rotation = islandRef.current.rotation.y;
       const normalizedRotation =
         ((rotation % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
-      console.log(normalizedRotation);
 
       // Set the current checkpoint based on the island's orientation
       switch (true) {

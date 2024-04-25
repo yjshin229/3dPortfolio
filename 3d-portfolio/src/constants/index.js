@@ -1,6 +1,4 @@
 import {
-  //   mobile,
-  //   web,
   javascript,
   typescript,
   html,
@@ -26,24 +24,8 @@ import {
   androidStudio,
   aws,
   gcp,
-  car,
   mysql,
 } from "../assets/icons";
-
-export const navLinks = [
-  {
-    id: "about",
-    title: "About",
-  },
-  {
-    id: "work",
-    title: "Work",
-  },
-  {
-    id: "contact",
-    title: "Contact",
-  },
-];
 
 const services = [
   {
@@ -217,7 +199,6 @@ const projects = [
     ],
     source_code_link: "https://github.com/Task-Terriers",
     article_link: "",
-    image: car,
   },
   {
     title: "React Native/ React Developer [project]",
@@ -246,7 +227,6 @@ const projects = [
     source_code_link: "https://github.com/SV22-TikiTaka",
     article_link:
       "https://medium.com/@yjshin229/2022-summer-bootcamp-d1d2a0c13828",
-    image: car,
   },
   {
     title: "Web Developer [project]",
@@ -276,7 +256,6 @@ const projects = [
     source_code_link: "https://github.com/SiliconValley22-Blossom",
     article_link:
       "https://medium.com/@yjshin229/silicon-valley-summer22-bootcamp-colorize-your-photos-with-ai-blossom-9a46898d429b",
-    image: car,
   },
 ];
 
