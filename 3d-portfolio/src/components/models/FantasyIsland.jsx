@@ -14,6 +14,7 @@ import { a } from "@react-spring/three";
 import islandScene from "../../assets/3d/fantasy_island.glb";
 import Island from "./Island";
 
+//main 3d island
 const FantasyIsland = ({
   isRotating,
   setIsRotating,
@@ -84,11 +85,8 @@ const FantasyIsland = ({
         ((rotation % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
       console.log(normalizedRotation);
 
-      // Set the current stage based on the island's orientation
+      // Set the current checkpoint based on the island's orientation
       switch (true) {
-        //   case normalizedRotation >= 5.45 && normalizedRotation <= 5.85:
-        //     setCurrentStage(4);
-        //     break;
         case normalizedRotation >= 2.8 && normalizedRotation <= 3.7:
           setCurrentStage(3);
           break;

@@ -31,7 +31,7 @@ const StyledHeader = styled.header`
   z-index: 10;
   right: 0;
   left: 0;
-  @media (min-width: 640px) {
+  @media (max-width: 640px) {
     padding-inline: 4rem;
   }
 `;

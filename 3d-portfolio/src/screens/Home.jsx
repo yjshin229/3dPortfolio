@@ -11,7 +11,7 @@ import Island from "../components/models/Island";
 //render Island
 const Home = () => {
   const [isRotating, setIsRotating] = useState(false);
-  const [currentStage, setCurrentStage] = useState(0);
+  const [currentStage, setCurrentStage] = useState(null);
 
   const adjustIslandForScreenSize = () => {
     let screenScale;
