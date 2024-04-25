@@ -65,6 +65,6 @@ const SubNavLink = styled(NavLink)`
   text-decoration: none;
 
   &.active {
-    color: #030062;
+    color: orange;
   }
 `;

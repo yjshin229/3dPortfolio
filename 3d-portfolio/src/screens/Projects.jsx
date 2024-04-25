@@ -20,7 +20,7 @@ const Projects = () => {
         </p>
       </Description>
       <SubContainer>
-        <SubTitle>Education</SubTitle>
+        <SubTitle>Projects</SubTitle>
         <ProjectsContainer>
           {projects.map((project) => (
             <ProjectsWrapper>
