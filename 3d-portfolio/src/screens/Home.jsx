@@ -49,10 +49,10 @@ const Home = () => {
 
     if (window.innerWidth < 768) {
       planeScale = [1.5, 1.5, 1.5];
-      planePosition = [-1.5, 1.5, 0];
+      planePosition = [1.5, 1.5, 0];
     } else {
       planeScale = [3, 3, 3];
-      planePosition = [-5, 3, -4];
+      planePosition = [5, 3, -4];
     }
 
     return [planeScale, planePosition];
@@ -79,7 +79,7 @@ const Home = () => {
             position={planePosition}
             scale={planeScale}
             isRotating={isRotating}
-            rotation={[0, 1, 0]}
+            rotation={[0, -1, 0]}
           />
           <FantasyIsland
             position={islandPosition}
